@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Image/Google__G__Logo.svg.png" type="image/x-icon">
+    <title>Google</title>
+</head>
+
+<body bgcolor="#202124">
+
+    <style>
+        #google {
+
+
+            width: 30%;
+            margin-left: 35%;
+            margin-top: 5%;
+            margin-bottom: 2%;
+
+
+
+        }
+
+        #input {
+
+            display: block;
+            border: 1px solid #ddd;
+            color: rgba(0, 0, 0, 0.87);
+            font-size: 16px;
+            padding: 13px;
+            padding-left: 45px;
+            border-radius: 25px;
+            width: 90%;
+            transition: box-shadow 100ms;
+            outline: none;
+
+
+
+        }
+
+        #inputBox {
+            width: 580px;
+            margin: 0px auto;
+            position: relative;
+            margin-top: -8px;
+            text-align: center;
+        }
+
+        #search-Button {
+
+            color: #ffffff;
+            border-radius: 10px;
+            outline: 0;
+            border-color: transparent;
+            transition: 0.3s ease all;
+            background-color:
+                #303134;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 25px;
+            display: inline-block;
+            margin-left: 46%;
+            margin-top: 20px;
+        }
+
+        #search-Button:hover {
+
+            color: #ffffff;
+
+            outline: 0;
+            border: 2px solid currentcolor;
+            transition: 0.3s ease all;
+            background-color:
+                #303134;
+            font-size: 15px;
+            font-weight: 600;
+            padding: 12px 25px;
+            display: inline-block;
+        }
+    </style>
+
+
+    <img id="google" src="Image/Google_2015_logo.svg.png" alt="" srcset="">
+    <div id="inputBox">
+        <input type="text" id="input"><br>
+    </div>
+
+    <button id="search-Button" onclick="search()">Google'da Ara</button>
+
+
+
+    <script>
+
+
+
+        document.addEventListener("keydown", function (event) {
+            if (event.code === "Enter") {
+                search();
+            }
+        });
+
+        const search = () => {
+            var input = document.getElementById("input").value;
+            console.log(input);
+            window.location.href = "https://www.google.com/search?q=" + input;
+        }
+    </script>
+
+
+</body>
+
+</html>
